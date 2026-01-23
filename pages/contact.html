@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation - Day 3</title>
+    <link rel="stylesheet" href="../css/validation.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Student Form Validation</h2>
+
+    <form id="myForm">
+
+        <label>Full Name</label>
+        <input type="text" id="name" onblur="validateName()">
+        <small id="nameError"></small>
+
+        <label>Email</label>
+        <input type="text" id="email" onblur="validateEmail()">
+        <small id="emailError"></small>
+
+        <label>Mobile Number</label>
+        <input type="text" id="mobile" onblur="validateMobile()">
+        <small id="mobileError"></small>
+
+        <label>Password</label>
+        <input type="password" id="password" onblur="validatePassword()">
+        <small id="passwordError"></small>
+
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword" onblur="validateConfirmPassword()">
+        <small id="confirmPasswordError"></small>
+
+        <label>Date of Birth (dd/mm/yyyy or dd-mm-yyyy)</label>
+        <input type="text" id="dob" placeholder="dd/mm/yyyy" onblur="validateDOB()">
+        <small id="dobError"></small>
+
+        <button type="submit" onclick="return validateForm()">Submit</button>
+
+    </form>
+</div>
+
+<script src="../js/validation.js"></script>
+</body>
+</html>

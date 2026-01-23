@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="../css/validation.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Student Registration</h2>
+
+    <form action="../php/process.php" method="post">
+
+        <label>Full Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Mobile Number:</label>
+        <input type="text" name="mobile" required>
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob" required>
+
+        <label>Department:</label>
+        <select name="dept" required>
+            <option value="">Select</option>
+            <option>IT</option>
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>EEE</option>
+        </select>
+
+        <label>Gender:</label>
+        <div class="radio-group">
+            <input type="radio" name="gender" value="Male" required> Male
+            <input type="radio" name="gender" value="Female"> Female
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+</body>
+</html>
