@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +13,7 @@
 <header>
     <h1>Student Smart Services Portal</h1>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.php">Home</a>
         <a href="pages/tools.html">Tools</a>
         <a href="pages/quiz.html">Quiz</a>
         <a href="pages/contact.html">Contact</a>
@@ -18,7 +21,15 @@
 </header>
 
 <section class="hero">
-    <h2>Interactive Student Dashboard</h2>
+    <?php
+    if(isset($_SESSION["user"])){
+        echo "<h2>Welcome " . $_SESSION["user"] . "</h2>";
+
+    } else {
+        echo "<h2> Welcome Guest</h2>";
+    }
+    ?>
+    
     <p>Click on the sections below to explore services</p>
 
     <!-- Image Mapping -->
@@ -34,6 +45,7 @@
         <!-- Contact -->
         <area shape="rect" coords="0,200,600,400" href="pages/contact.html" alt="Contact">
     </map>
+    <a href="logout.php">Logout</a>
 </section>
 
 <footer>
